@@ -1,0 +1,91 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="xAbnmQ1CrZHhZ_YNduNF">
+    <mxGraphModel dx="1374" dy="868" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1350" pageHeight="820" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=15;fontStyle=1;fontColor=#1E293B;" value="HealthBridge Regional Hospital Network - High-Level Hybrid Cloud Architecture&#xa;Approved national boundary | 99.99% availability target | RPO &lt;= 15 min | RTO &lt;= 60 min" vertex="1">
+          <mxGeometry height="40" width="700" x="320" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="boundary" parent="1" style="swimlane;whiteSpace=wrap;html=1;dashed=1;dashPattern=6 6;strokeColor=#475569;strokeWidth=2;fillColor=#F8FAFC;fontStyle=1;fontSize=12;startSize=26;align=left;spacingLeft=10;fontColor=#0F172A;" value="Approved national boundary" vertex="1">
+          <mxGeometry height="730" width="1300" x="20" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="users" parent="boundary" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;strokeWidth=2;align=center;fontSize=11;fontColor=#0F172A;" value="&lt;b&gt;Clinical Users&lt;/b&gt;&lt;hr/&gt;Physicians, nurses, lab staff,&lt;br/&gt;schedulers, clinicians&lt;br/&gt;&lt;br/&gt;&lt;i&gt;HTTPS/TLS access&lt;/i&gt;" vertex="1">
+          <mxGeometry height="110" width="200" x="20" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="onprem" parent="boundary" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;strokeWidth=2;align=center;fontSize=11;fontColor=#0F172A;" value="&lt;b&gt;Legacy On-Premises&lt;/b&gt;&lt;hr/&gt;3 data centers&lt;br/&gt;&lt;br/&gt;Patient records / scheduling / lab&lt;br/&gt;Temporary hybrid integration&lt;br/&gt;Encrypted connectivity" vertex="1">
+          <mxGeometry height="135" width="200" x="20" y="235" as="geometry" />
+        </mxCell>
+        <mxCell id="sharedresp" parent="boundary" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF9C3;strokeColor=#CA8A04;strokeWidth=1.5;align=left;fontSize=10;spacing=8;fontColor=#713F12;" value="&lt;b&gt;Shared Responsibility&lt;/b&gt;&lt;hr/&gt;Provider responsibility increases from&lt;br/&gt;IaaS &amp;rarr; PaaS &amp;rarr; SaaS&lt;br/&gt;&lt;br/&gt;&lt;b&gt;HealthBridge always retains:&lt;/b&gt;&lt;br/&gt;&amp;bull; Data governance &amp;amp; residency&lt;br/&gt;&amp;bull; Identity &amp;amp; access policy (RBAC)&lt;br/&gt;&amp;bull; Compliance &amp;amp; accountability&lt;br/&gt;&amp;bull; Secure configuration &amp;amp; audit" vertex="1">
+          <mxGeometry height="165" width="200" x="20" y="445" as="geometry" />
+        </mxCell>
+        <mxCell id="regionA" parent="boundary" style="swimlane;whiteSpace=wrap;html=1;strokeColor=#1E40AF;strokeWidth=2;fillColor=#EFF6FF;fontStyle=1;fontSize=12;startSize=30;align=center;fontColor=#1E3A8A;" value="Primary Cloud Region (approved national Region A) — Production workloads span at least two Availability Zones" vertex="1">
+          <mxGeometry height="465" width="810" x="245" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tier1" parent="regionA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1D4ED8;strokeColor=#1E40AF;strokeWidth=1.5;fontColor=#FFFFFF;align=center;fontSize=11;spacing=6;" value="&lt;b&gt;1. Web Tier (PaaS)&lt;/b&gt;&lt;hr/&gt;&lt;br/&gt;Managed web runtime&lt;br/&gt;&lt;br/&gt;Load balancing + health checks&lt;br/&gt;&lt;br/&gt;Auto-scaling stateless front end&lt;br/&gt;&lt;br/&gt;&lt;b&gt;AZ-A + AZ-B&lt;/b&gt;" vertex="1">
+          <mxGeometry height="235" width="180" x="15" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tier2" parent="regionA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2563EB;strokeColor=#1E40AF;strokeWidth=1.5;fontColor=#FFFFFF;align=left;fontSize=10.5;spacing=8;" value="&lt;b&gt;2. Application Tier&lt;/b&gt;&lt;hr/&gt;&lt;br/&gt;&lt;b&gt;IaaS:&lt;/b&gt; Core clinical application nodes&lt;br/&gt;&amp;bull; Legacy-compatible OS/network control&lt;br/&gt;&amp;bull; Stateless application nodes&lt;br/&gt;&lt;br/&gt;&lt;b&gt;PaaS:&lt;/b&gt; API + integration services&lt;br/&gt;&amp;bull; Queue/event processing&lt;br/&gt;&amp;bull; Decoupled workflow services" vertex="1">
+          <mxGeometry height="235" width="190" x="210" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tier3" parent="regionA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3B82F6;strokeColor=#1E40AF;strokeWidth=1.5;fontColor=#FFFFFF;align=left;fontSize=10.5;spacing=8;" value="&lt;b&gt;3. Data Tier&lt;/b&gt;&lt;hr/&gt;&lt;br/&gt;&lt;b&gt;PaaS:&lt;/b&gt; Managed transactional DB&lt;br/&gt;&amp;bull; Multi-AZ automatic failover&lt;br/&gt;&lt;br/&gt;&lt;b&gt;PaaS:&lt;/b&gt; Cache + analytics platform&lt;br/&gt;&lt;br/&gt;&lt;b&gt;INaaS:&lt;/b&gt; Governed clinical information views&lt;br/&gt;&lt;br/&gt;&lt;b&gt;IaaS:&lt;/b&gt; Protected backup/archive storage" vertex="1">
+          <mxGeometry height="235" width="220" x="415" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="tier4" parent="regionA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#60A5FA;strokeColor=#1E40AF;strokeWidth=1.5;fontColor=#0F172A;align=center;fontSize=10.5;spacing=6;" value="&lt;b&gt;4. External&lt;br/&gt;Integrations&lt;/b&gt;&lt;hr/&gt;&lt;br/&gt;SaaS identity federation&lt;br/&gt;&lt;br/&gt;SaaS telemedicine integration&lt;br/&gt;&lt;br/&gt;Legacy systems TLS secure hybrid link" vertex="1">
+          <mxGeometry height="235" width="145" x="650" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="composite" parent="regionA" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;strokeColor=#1E40AF;strokeWidth=1.5;fillColor=#DBEAFE;fontColor=#1E3A8A;align=center;fontSize=11;" value="&lt;b&gt;Composite Cloud Service (Ruparelia)&lt;/b&gt;&lt;br/&gt;Web + application + integration + data cells operate as one unified HealthBridge Clinical Platform" vertex="1">
+          <mxGeometry height="115" width="620" x="15" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="federated_label" parent="regionA" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;strokeColor=#6B21A8;strokeWidth=1.5;fillColor=#F3E8FF;fontColor=#581C87;align=center;fontSize=10.5;spacing=4;" value="&lt;b&gt;Federated Cloud Service&lt;/b&gt;&lt;br/&gt;HealthBridge platform + independent SaaS identity &amp;amp; telemedicine services" vertex="1">
+          <mxGeometry height="115" width="145" x="650" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="c_web_app" edge="1" parent="regionA" source="tier1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#1E40AF;" target="tier2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_app_data" edge="1" parent="regionA" source="tier2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#1E40AF;" target="tier3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_app_ext" edge="1" parent="regionA" source="tier2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=1.5;strokeColor=#6B21A8;dashed=1;" target="tier4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="405" y="295" />
+              <mxPoint x="640" y="295" />
+              <mxPoint x="640" y="163" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="saas_id" parent="boundary" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#7C3AED;strokeWidth=2;align=center;fontSize=11;fontColor=#0F172A;" value="&lt;b&gt;SaaS Identity Cell&lt;/b&gt;&lt;hr/&gt;Central authentication, MFA,&lt;br/&gt;account lifecycle, RBAC federation" vertex="1">
+          <mxGeometry height="90" width="200" x="1075" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="saas_tele" parent="boundary" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#7C3AED;strokeWidth=2;align=center;fontSize=11;fontColor=#0F172A;" value="&lt;b&gt;SaaS Telemedicine Cell&lt;/b&gt;&lt;hr/&gt;Managed telemedicine service&lt;br/&gt;&amp;gt; 10,000 concurrent sessions" vertex="1">
+          <mxGeometry height="90" width="200" x="1075" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="dr_region" parent="boundary" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#D97706;strokeWidth=2;fillColor=#FEF3C7;fontColor=#92400E;align=center;fontSize=11.5;fontStyle=0;" value="&lt;b&gt;Disaster Recovery / Warm Standby &amp;mdash; Approved National Region B&lt;/b&gt;&lt;br/&gt;Reduced-capacity web/application services &amp;nbsp;|&amp;nbsp; Replicated database standby &amp;nbsp;|&amp;nbsp; Protected backup copies &amp;nbsp;|&amp;nbsp; Encrypted replication &amp;nbsp;|&amp;nbsp; Failover tested against RPO/RTO" vertex="1">
+          <mxGeometry height="75" width="810" x="245" y="635" as="geometry" />
+        </mxCell>
+        <mxCell id="c_users_web" edge="1" parent="boundary" source="users" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#2563EB;fontColor=#1E40AF;fontSize=10;fontStyle=1;" target="tier1" value="HTTPS / TLS">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_onprem_app" edge="1" parent="boundary" source="onprem" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeWidth=2;strokeColor=#475569;dashed=1;fontColor=#475569;fontSize=10;fontStyle=1;" target="tier2" value="Encrypted hybrid link">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="235" y="302.5" />
+              <mxPoint x="235" y="340" />
+              <mxPoint x="550" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c_ext_saas_id" edge="1" parent="boundary" source="tier4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#7C3AED;" target="saas_id">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_ext_saas_tele" edge="1" parent="boundary" source="tier4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#7C3AED;" target="saas_tele">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_regionA_dr" edge="1" parent="boundary" source="regionA" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeWidth=2;strokeColor=#D97706;fontColor=#B45309;fontSize=10.5;fontStyle=1;dashed=1;" target="dr_region" value="Encrypted async replication / failover (RPO &lt;= 15 min, RTO &lt;= 60 min)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
