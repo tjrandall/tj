@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="xAbnmQ1CrZHhZ_YNduNF">
-    <mxGraphModel dx="1362" dy="856" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1350" pageHeight="820" math="0" shadow="0">
+    <mxGraphModel dx="948" dy="599" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1350" pageHeight="820" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -20,7 +20,7 @@
           <mxGeometry height="165" width="200" x="20" y="445" as="geometry" />
         </mxCell>
         <mxCell id="regionA" parent="boundary" style="swimlane;whiteSpace=wrap;html=1;strokeColor=#1E40AF;strokeWidth=2;fillColor=#EFF6FF;fontStyle=1;fontSize=12;startSize=30;align=center;fontColor=#1E3A8A;" value="Primary Cloud Region (approved national Region A) — Production workloads span at least two Availability Zones" vertex="1">
-          <mxGeometry height="465" width="810" x="245" y="45" as="geometry" />
+          <mxGeometry height="515" width="810" x="245" y="45" as="geometry" />
         </mxCell>
         <mxCell id="tier1" parent="regionA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1D4ED8;strokeColor=#1E40AF;strokeWidth=1.5;fontColor=#FFFFFF;align=center;fontSize=11;spacing=6;" value="&lt;b&gt;1. Web Tier (PaaS)&lt;/b&gt;&lt;hr/&gt;&lt;br/&gt;Managed web runtime&lt;br/&gt;&lt;br/&gt;Load balancing + health checks&lt;br/&gt;&lt;br/&gt;Auto-scaling stateless front end&lt;br/&gt;&lt;br/&gt;&lt;b&gt;AZ-A + AZ-B&lt;/b&gt;" vertex="1">
           <mxGeometry height="235" width="180" x="15" y="45" as="geometry" />
@@ -35,10 +35,10 @@
           <mxGeometry height="235" width="145" x="650" y="45" as="geometry" />
         </mxCell>
         <mxCell id="composite" parent="regionA" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;strokeColor=#1E40AF;strokeWidth=1.5;fillColor=#DBEAFE;fontColor=#1E3A8A;align=center;fontSize=11;" value="&lt;b&gt;Composite Cloud Service (Ruparelia)&lt;/b&gt;&lt;br/&gt;Web + application + integration + data cells operate as one unified HealthBridge Clinical Platform" vertex="1">
-          <mxGeometry height="115" width="620" x="15" y="320" as="geometry" />
+          <mxGeometry height="100" width="620" x="15" y="400" as="geometry" />
         </mxCell>
         <mxCell id="federated_label" parent="regionA" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;strokeColor=#6B21A8;strokeWidth=1.5;fillColor=#F3E8FF;fontColor=#581C87;align=center;fontSize=10.5;spacing=4;" value="&lt;b&gt;Federated Cloud Service&lt;/b&gt;&lt;br/&gt;HealthBridge platform + independent SaaS identity &amp;amp; telemedicine services" vertex="1">
-          <mxGeometry height="115" width="145" x="650" y="320" as="geometry" />
+          <mxGeometry height="100" width="145" x="650" y="400" as="geometry" />
         </mxCell>
         <mxCell id="c_web_app" edge="1" parent="regionA" source="tier1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#1E40AF;" target="tier2">
           <mxGeometry relative="1" as="geometry" />
@@ -53,6 +53,33 @@
               <mxPoint x="640" y="295" />
               <mxPoint x="640" y="163" />
             </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EgY1rxuezIIeaosW6YqB-1" parent="regionA" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;strokeColor=#d79b00;strokeWidth=1.5;fillColor=#ffe6cc;align=center;fontSize=11;" value="&lt;b&gt;Observability &amp;amp; Security Monitoring (PaaS)&lt;/b&gt;&lt;br&gt;Centralized logging / Audit logging (FR-07) / Metrics &amp;amp; dashboards / Monitoring &amp;amp; alerts (FR-10) / Security event collection /&amp;nbsp;Multi-AZ monitoring service" vertex="1">
+          <mxGeometry height="75" width="780" x="15" y="315" as="geometry" />
+        </mxCell>
+        <mxCell id="EgY1rxuezIIeaosW6YqB-5" edge="1" parent="regionA" source="tier2" style="endArrow=classic;html=1;rounded=0;entryX=0.433;entryY=0.007;entryDx=0;entryDy=0;entryPerimeter=0;jumpStyle=arc;dashed=1;dashPattern=1 1;jumpSize=19;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" target="EgY1rxuezIIeaosW6YqB-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="355" y="295" as="sourcePoint" />
+            <mxPoint x="355" y="325" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EgY1rxuezIIeaosW6YqB-4" edge="1" parent="regionA" source="tier3" style="endArrow=classic;html=1;rounded=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.585;entryY=0.028;entryDx=0;entryDy=0;entryPerimeter=0;jumpStyle=arc;dashed=1;dashPattern=1 1;jumpSize=19;" target="EgY1rxuezIIeaosW6YqB-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="476" y="286" as="sourcePoint" />
+            <mxPoint x="475" y="325" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EgY1rxuezIIeaosW6YqB-3" edge="1" parent="regionA" source="tier4" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.908;entryY=0.004;entryDx=0;entryDy=0;entryPerimeter=0;jumpStyle=arc;dashed=1;dashPattern=1 1;jumpSize=19;" target="EgY1rxuezIIeaosW6YqB-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="56" y="295" as="sourcePoint" />
+            <mxPoint x="55" y="334" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EgY1rxuezIIeaosW6YqB-6" edge="1" parent="regionA" source="tier1" style="endArrow=classic;html=1;rounded=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.058;entryY=0.015;entryDx=0;entryDy=0;entryPerimeter=0;jumpStyle=arc;dashed=1;dashPattern=1 1;jumpSize=19;" target="EgY1rxuezIIeaosW6YqB-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="465" y="305" as="sourcePoint" />
+            <mxPoint x="466" y="342" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="saas_id" parent="boundary" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#7C3AED;strokeWidth=2;align=center;fontSize=11;fontColor=#0F172A;" value="&lt;b&gt;SaaS Identity Cell&lt;/b&gt;&lt;hr/&gt;Central authentication, MFA,&lt;br/&gt;account lifecycle, RBAC federation" vertex="1">
