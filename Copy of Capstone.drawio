@@ -74,10 +74,10 @@
           <mxGeometry height="65" width="120" x="280" y="375" as="geometry" />
         </mxCell>
         <mxCell id="node_cb1" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#ffe3e3;strokeColor=#c92a2a;strokeWidth=2;fontSize=10;" value="&lt;b&gt;CB-1: Thread Execution Cap&lt;/b&gt;&lt;br&gt;&amp;gt; 6 Calls OR &amp;gt; 180s Unfinished" vertex="1">
-          <mxGeometry height="60" width="200" x="495" y="140" as="geometry" />
+          <mxGeometry height="60" width="200" x="540" y="144" as="geometry" />
         </mxCell>
         <mxCell id="node_agent_planner" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e7f5ff;strokeColor=#1c7ed6;strokeWidth=2;" value="&lt;b&gt;Context &amp;amp; Plan Worker&lt;/b&gt;&lt;br&gt;(EHR / SOP Retrieval)&lt;br&gt;&lt;font color=&quot;#495057&quot; style=&quot;font-size:10px;&quot;&gt;Action Proposal Generator&lt;/font&gt;" vertex="1">
-          <mxGeometry height="75" width="200" x="495" y="232.5" as="geometry" />
+          <mxGeometry height="75" width="200" x="540" y="232.5" as="geometry" />
         </mxCell>
         <mxCell id="node_ehr_db" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#f1f3f5;strokeColor=#495057;strokeWidth=2;fontSize=10;" value="&lt;b&gt;EHR / Schedules&lt;/b&gt;&lt;br&gt;Handover Notes" vertex="1">
           <mxGeometry height="65" width="115" x="465" y="375" as="geometry" />
@@ -86,28 +86,25 @@
           <mxGeometry height="65" width="130" x="590" y="375" as="geometry" />
         </mxCell>
         <mxCell id="node_agent_policy" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e7f5ff;strokeColor=#1c7ed6;strokeWidth=2;" value="&lt;b&gt;Policy &amp;amp; Identity Check&lt;/b&gt;&lt;br&gt;(Backend Proxy API)&lt;br&gt;&lt;font color=&quot;#495057&quot; style=&quot;font-size:10px;&quot;&gt;RBAC, Consent &amp;amp; Action Classifier&lt;/font&gt;" vertex="1">
-          <mxGeometry height="75" width="200" x="745" y="232.5" as="geometry" />
+          <mxGeometry height="75" width="200" x="830" y="232.5" as="geometry" />
         </mxCell>
         <mxCell id="node_policy_rules" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#f1f3f5;strokeColor=#495057;strokeWidth=2;fontSize=10;" value="&lt;b&gt;42 CFR Part 2 &amp;amp;&lt;/b&gt;&lt;br&gt;Payer Rules DB" vertex="1">
-          <mxGeometry height="65" width="120" x="710" y="350" as="geometry" />
+          <mxGeometry height="65" width="120" x="740" y="350" as="geometry" />
         </mxCell>
         <mxCell id="node_hitl_clinical" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff4e6;strokeColor=#d9480f;strokeWidth=2;fontSize=10;" value="&lt;b&gt;HITL-1 / HITL-3: Clinical Gate&lt;/b&gt;&lt;br&gt;ACA &amp;gt; 0.75 (0-72h) OR Discharge/BNC&lt;br&gt;&lt;font color=&quot;#d9480f&quot;&gt;Target: Case Mgr / Clinician&lt;/font&gt;" vertex="1">
-          <mxGeometry height="95" width="230" x="1010" y="222.5" as="geometry" />
+          <mxGeometry height="95" width="230" x="1150" y="220" as="geometry" />
         </mxCell>
         <mxCell id="node_hitl_caseload" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff4e6;strokeColor=#d9480f;strokeWidth=2;fontSize=10;" value="&lt;b&gt;HITL-2: Caseload Gate&lt;/b&gt;&lt;br&gt;Primary Counselor Reassignment&lt;br&gt;&lt;font color=&quot;#d9480f&quot;&gt;Target: Program Supervisor&lt;/font&gt;" vertex="1">
-          <mxGeometry height="90" width="220" x="735" y="470" as="geometry" />
-        </mxCell>
-        <mxCell id="node_hitl_billing" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff4e6;strokeColor=#d9480f;strokeWidth=2;fontSize=10;" value="&lt;b&gt;HITL-4 / HITL-5: Legal &amp;amp; Billing Gate&lt;/b&gt;&lt;br&gt;Claim &amp;gt; $3,500 OR 42 CFR SUD Disclosure&lt;br&gt;&lt;font color=&quot;#d9480f&quot;&gt;Target: Billing Specialist / Privacy Officer&lt;/font&gt;" vertex="1">
-          <mxGeometry height="95" width="240" x="1005" y="415" as="geometry" />
+          <mxGeometry height="90" width="220" x="820" y="480" as="geometry" />
         </mxCell>
         <mxCell id="node_agent_dispatcher" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e7f5ff;strokeColor=#1c7ed6;strokeWidth=2;" value="&lt;b&gt;Action Dispatcher Agent&lt;/b&gt;&lt;br&gt;(Safe Execution Proxy)&lt;br&gt;&lt;font color=&quot;#495057&quot; style=&quot;font-size:10px;&quot;&gt;Applies CB Throttles &amp;amp; Locks&lt;/font&gt;" vertex="1">
-          <mxGeometry height="65" width="210" x="1020" y="580" as="geometry" />
+          <mxGeometry height="65" width="210" x="1160" y="557.5" as="geometry" />
         </mxCell>
         <mxCell id="node_cb_action" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#ffe3e3;strokeColor=#c92a2a;strokeWidth=2;fontSize=10;" value="&lt;b&gt;CB-2, CB-3, CB-4: Boundary Guards&lt;/b&gt;&lt;br&gt;CB-2: Alert Throttle (Emergencies Bypass)&lt;br&gt;CB-3: &amp;gt;1 Reassign/Shift | CB-4: Lock Unsigned EDI" vertex="1">
-          <mxGeometry height="70" width="270" x="990" y="680" as="geometry" />
+          <mxGeometry height="70" width="270" x="1130" y="690" as="geometry" />
         </mxCell>
         <mxCell id="node_prod_target" parent="1" style="shape=component;whiteSpace=wrap;html=1;fillColor=#e9ecef;strokeColor=#495057;strokeWidth=2;" value="&lt;b&gt;Healthcare Systems Targets&lt;/b&gt;&lt;br&gt;EHR (FHIR) / EDI 837 / Messaging SMS" vertex="1">
-          <mxGeometry height="65" width="240" x="1005" y="790" as="geometry" />
+          <mxGeometry height="65" width="240" x="1145" y="800" as="geometry" />
         </mxCell>
         <mxCell id="node_escalation_sink" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe3e3;strokeColor=#e03131;strokeWidth=3;" value="&lt;b style=&quot;color:#e03131;&quot;&gt;FlowQueue Fail-Safe Escalation Path&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#495057&quot; style=&quot;font-size:10px;&quot;&gt;Action Suspended | AWAITING_HUMAN_REVIEW&lt;br&gt;On-Call Clinician / Program Supervisor / Secondary Escalation on Timeout&lt;/font&gt;" vertex="1">
           <mxGeometry height="75" width="450" x="450" y="860" as="geometry" />
@@ -148,32 +145,32 @@
         <mxCell id="e_policy_caseload" edge="1" parent="1" source="node_agent_policy" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#d9480f;" target="node_hitl_caseload" value="Counselor Swap">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e_policy_billing" edge="1" parent="1" source="node_agent_policy" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#d9480f;edgeStyle=orthogonalEdgeStyle;curved=0;" target="node_hitl_billing" value="Claim OR SUD Data">
-          <mxGeometry relative="1" as="geometry">
+        <mxCell id="e_policy_billing" edge="1" parent="1" source="node_agent_policy" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#d9480f;edgeStyle=orthogonalEdgeStyle;curved=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="node_hitl_billing" value="Claim OR SUD Data">
+          <mxGeometry relative="1" x="0.0493" as="geometry">
             <Array as="points">
-              <mxPoint x="965" y="270" />
               <mxPoint x="965" y="462" />
+              <mxPoint x="1145" y="462" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="e_policy_bypass" edge="1" parent="1" source="node_agent_policy" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#2b8a3e;edgeStyle=orthogonalEdgeStyle;curved=0;" target="node_agent_dispatcher" value="Low-Risk Action (Authorized Alert / Note)">
-          <mxGeometry relative="1" x="-0.32" y="10" as="geometry">
+        <mxCell id="e_policy_bypass" edge="1" parent="1" source="node_agent_policy" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#2b8a3e;edgeStyle=orthogonalEdgeStyle;curved=0;" target="node_agent_dispatcher" value="Low-Risk Action&amp;nbsp;&lt;div&gt;(Authorized Alert / Note)&lt;/div&gt;">
+          <mxGeometry relative="1" x="-0.5466" as="geometry">
             <mxPoint as="offset" />
             <Array as="points">
               <mxPoint x="880" y="612" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="e_hitl1_pass" edge="1" parent="1" source="node_hitl_clinical" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#2b8a3e;" target="node_hitl_billing" value="Clinical Approved">
+        <mxCell id="e_hitl1_pass" edge="1" parent="1" source="node_hitl_clinical" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#2b8a3e;" target="node_hitl_billing" value="Clinical&amp;nbsp;&lt;div&gt;Approved&lt;/div&gt;">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="e_hitl4_pass" edge="1" parent="1" source="node_hitl_billing" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#2b8a3e;" target="node_agent_dispatcher" value="Approval Granted">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e_caseload_pass" edge="1" parent="1" source="node_hitl_caseload" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#2b8a3e;edgeStyle=orthogonalEdgeStyle;curved=0;" target="node_agent_dispatcher" value="Supervisor Approved">
-          <mxGeometry relative="1" as="geometry">
+        <mxCell id="e_caseload_pass" edge="1" parent="1" source="node_hitl_caseload" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#2b8a3e;edgeStyle=orthogonalEdgeStyle;curved=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="node_agent_dispatcher" value="Supervisor Approved">
+          <mxGeometry relative="1" x="-0.48" as="geometry">
             <Array as="points">
-              <mxPoint x="845" y="590" />
+              <mxPoint x="930" y="590" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -194,18 +191,18 @@
         <mxCell id="esc_cb1" edge="1" parent="1" source="node_cb1" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#e03131;edgeStyle=orthogonalEdgeStyle;curved=0;" target="node_escalation_sink" value="ESCALATE (Exec Loop Cap)">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="440" y="170" />
-              <mxPoint x="440" y="880" />
+              <mxPoint x="460" y="170" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="esc_hitl1" edge="1" parent="1" source="node_hitl_clinical" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#e03131;edgeStyle=orthogonalEdgeStyle;curved=0;" target="node_escalation_sink" value="Reject / Timeout">
-          <mxGeometry relative="1" as="geometry">
+        <mxCell id="esc_hitl1" edge="1" parent="1" source="node_hitl_clinical" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#e03131;edgeStyle=orthogonalEdgeStyle;curved=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="node_escalation_sink" value="Reject / Timeout">
+          <mxGeometry relative="1" x="-0.2252" as="geometry">
             <Array as="points">
-              <mxPoint x="1290" y="270" />
-              <mxPoint x="1290" y="880" />
-              <mxPoint x="900" y="880" />
+              <mxPoint x="1380" y="270" />
+              <mxPoint x="1430" y="270" />
+              <mxPoint x="1430" y="880" />
             </Array>
+            <mxPoint x="1380" y="340" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="esc_hitl2" edge="1" parent="1" source="node_hitl_caseload" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#e03131;edgeStyle=orthogonalEdgeStyle;curved=0;" target="node_escalation_sink" value="Supervisor Rejection">
@@ -236,6 +233,16 @@
         </mxCell>
         <mxCell id="e_resolve_success" edge="1" parent="1" source="node_agent_orchestrator" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#006600;fontColor=#006600;" target="node_verified_success" value="Verified Complete">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZZENehcKH1ZxTyr9rSdJ-1" edge="1" parent="1" source="node_hitl_clinical" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#e03131;edgeStyle=orthogonalEdgeStyle;curved=0;" target="node_hitl_billing" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="1290" y="305" as="sourcePoint" />
+            <mxPoint x="900" y="880" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="node_hitl_billing" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff4e6;strokeColor=#d9480f;strokeWidth=2;fontSize=10;" value="&lt;b&gt;HITL-4 / HITL-5: Legal &amp;amp; Billing Gate&lt;/b&gt;&lt;br&gt;Claim &amp;gt; $3,500 OR 42 CFR SUD Disclosure&lt;br&gt;&lt;font color=&quot;#d9480f&quot;&gt;Target: Billing Specialist / Privacy Officer&lt;/font&gt;" vertex="1">
+          <mxGeometry height="95" width="240" x="1145" y="415" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
